@@ -2,48 +2,10 @@
 > 프로젝트 기간 2022.06.13 ~ 2022.07.01  
 팀원 : [malrang](https://github.com/malrang-malrang) [Tiana](https://github.com/Kim-TaeHyun-A) / 리뷰어 : [stevenkim](https://github.com/stevenkim18)
 
-- [Ground Rules](#ground-rules)
 - [실행화면](#실행화면)
 - [STEP 1 구현](#step-1-구현)
     + [고민했던 것들(트러블 슈팅)](#고민했던-것들트러블-슈팅)
     + [질문한것들](#질문한것들)
-
-## Ground Rules
-### 🌈 스크럼
-- 10시 ~ 10시30분
-
-### 주간 활동 시간
-- 월, 화,수, 목, 금 : 10시 ~ 22시
-- 수요일 : 개인공부
-- 점심시간 : 12시 ~ 13시
-- 저녁시간 : 18시 ~ 20시
-- 상황에 따라 조정 가능
-
-###  🪧 코딩 컨벤션
-
-#### Commit 규칙
-커밋 제목은 최대 50자 입력
-본문은 한 줄 최대 72자 입력
-
-#### Commit 메세지
-chore: 코드 수정, 내부 파일 수정.  
-feat: 새로운 기능 구현.  
-style: 스타일 관련 기능.(코드의 구조/형태 개선)  
-add: feat 이외의 부수적인 코드 추가, 라이브러리 추가  
-file: 새로운 파일 생성, 삭제 시  
-fix: 버그, 오류 해결.  
-docs: README나 WIKI 등의 문서 개정.   
-correct: 주로 문법의 오류나 타입의 변경, 이름 변경 등에 사용합니다.  
-move: 프로젝트 내 파일이나 코드(리소스)의 이동.  
-refactor: 전면 수정이 있을 때 사용합니다  
-test: 테스트 코드를 작성할 때 사용합니다.  
-
-#### Commit Body 규칙
-제목 끝에 마침표(.) 금지
-한글로 작성
-
-#### 브랜치 이름 규칙
-`STEP1`, `STEP2`, `STEP3`
 
 ## 실행화면
 ![ㄴㄴ](https://user-images.githubusercontent.com/88717147/174244161-6825eafe-d1ec-4336-a3f9-a1fc96c3f7d6.gif)
@@ -232,6 +194,20 @@ final class Json {
     private init() { }
 }
 ```
+
+6️⃣ DateFormatter
+
+* dateFormatter의 프로퍼티 세팅을 통해 앱 사용자의 위치에 맞게 시간을 표시합니다.
+```swift
+dateFormatter.dateStyle = .long
+dateFormatter.locale = .autoupdatingCurrent
+```
+* Json 에서 Date 타입으로 파싱하기
+    Json 데이터 파싱에 사용되는 데이터 타입의 프로퍼티가 Date인 경우에는 별도의 디코딩을 하지 않으면 Double 값으로 디코딩을 시도합니다. 이 덕분에 제공된 JSONFile에 작성된 double 데이터(timeIntervalSinceReferenceDate)를 별도의 처리 없이 Date로 파싱할 수 있었습니다.
+
+* 시뮬레이터가 동작하는 지역을 바꾸려면 프로젝트의 세팅에서 Localization을 추가하고 시뮬레이터 세팅 앱에서 위치를 변경해야 합니다.
+
+![](https://i.imgur.com/ueNvuq9.png)
 
 
 
