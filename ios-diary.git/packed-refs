@@ -1,0 +1,8 @@
+# pack-refs with: peeled fully-peeled sorted 
+87ceb3c944e20adc9175dc33db29994677ec9708 refs/heads/STEP1
+d0f9b85a0b1eaad283dcc2b8a3657aaa7cb39cdf refs/heads/STEP2
+4a1f762a5712880f62e521b67fe597d9cf219107 refs/heads/STEP3
+d20d1b2cb2f8f727b2ad2762455e5e747e75409f refs/heads/STEP3-2
+45af789b33cc9f89404644dd993f9fc1c3bb6cfd refs/heads/ic_5_malrang
+45af789b33cc9f89404644dd993f9fc1c3bb6cfd refs/heads/ic_5_tiana
+588fbfbc0d04839afdeea2a81be5e71604ac8446 refs/heads/main
